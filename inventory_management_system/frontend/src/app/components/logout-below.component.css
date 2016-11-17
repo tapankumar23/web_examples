@@ -1,0 +1,9 @@
+#demo-menu-lower-left {
+  margin-left: 40%;
+}
+
+body {
+  padding: 20px;
+  background: #fafafa;
+  position: relative;
+}
