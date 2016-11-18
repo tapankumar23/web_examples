@@ -1,36 +1,44 @@
 <div class="container">
-<form *ngIf="!registered" class="ui form" (ngSubmit)="onSubmit()" #registerForm = "ngForm">
-  <h2 class="ui dividing header">Register User</h2>
-  <div class="field">
-    <label>* Name</label>
+  <h5 class="ui dividing header">Register User</h5>
+  <form class="ui form" *ngIf="!registered" (ngSubmit)="onSubmit()" #registerForm = "ngForm">
+    <label>* All fields are mandatory</label>
     <div class="two fields">
-      <div class="field">
-      <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="newUser.firstName" ngControl="firstName" required>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" name="firstName" id="firstName" [(ngModel)]="newUser.firstName" ngControl="firstName" required/>
+        <label class="mdl-textfield__label" for="firstName">FirstName</label>
       </div>
-      <div class="field">
-        <input type="text" name="lastName" placeholder="Last Name" [(ngModel)]="newUser.lastName" ngControl="lastName" required>
-      </div>
-    </div>
-  </div>
-  <div class="field">
-    <label>* Username/Pasword</label>
-    <div class="three fields">
-      <div class="field">
-        <input type="text" name="userName" placeholder="User Name" [(ngModel)]="newUser.userName" ngControl="userName" required>
-      </div>
-      <div class="field">
-        <input type="password" name="password" placeholder="Password" [(ngModel)]="newUser.password" ngControl="password1" required>
-      </div>
-      <div class="field">
-        <input type="password" name="password" placeholder="Password Again" ngControl="password2" required>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="lastName"  name="lastName" [(ngModel)]="newUser.lastName" ngControl="lastName" required/>
+        <label class="mdl-textfield__label" for="lastName">LastName</label>
       </div>
     </div>
-  </div>
-
-  <button type="submit" class="ui button" [disabled]="!registerForm.form.valid" >Register</button>
-</form>
-
+    <div class="two fields">
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" name="email" id="email" [(ngModel)]="newUser.email" ngControl="email" required/>
+        <label class="mdl-textfield__label" for="email">Email</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" name="phone" id="phone" [(ngModel)]="newUser.phone" ngControl="phone" required/>
+        <label class="mdl-textfield__label" for="phone">Phone</label>
+      </div>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" name="username" id="username" [(ngModel)]="newUser.username" ngControl="username" required/>
+      <label class="mdl-textfield__label" for="username">Username</label>
+    </div>
+    <div class="two fields">
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="password" name="password" id="userpass" [(ngModel)]="newUser.password" ngControl="password" required/>
+        <label class="mdl-textfield__label" for="userpass">Password</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="password" name="cnfuserpass" id="cnfuserpass" />
+        <label class="mdl-textfield__label" for="cnfuserpass">Confirm Password</label>
+      </div>
+    </div>
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" [disabled]="!registerForm.form.valid" >Register</button>
+  </form>
+</div>
 <div *ngIf="registered">
   <h1>Register Success!</h1>
-</div>
 </div>

@@ -10,11 +10,4 @@
            					http://www.springframework.org/schema/aop 
            					http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 
-
-	<aop:aspectj-autoproxy />
-
-	<bean id="testController" class="com.ims.backend.controllers.TestController" />
-
-	<!-- Aspect -->
-	<bean id="logAspect" class="com.ims.backend.aop.LoggingAspect" />
 </beans>

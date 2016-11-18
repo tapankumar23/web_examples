@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
-import { AppHeaderComponent } from './components/app-header.component';
+import { AppHeaderComp } from './components/app-header.component';
+import { HomeComp } from './components/home.component';
+import { RightMenuComp } from './components/right-menu.component';
 
 @Component({
   selector: 'app-root',

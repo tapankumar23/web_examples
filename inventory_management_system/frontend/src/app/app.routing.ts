@@ -1,27 +1,27 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent }  from './components/home.component';
-import { LoginComponent }  from './components/login.component';
-import { RegisterComponent }  from './components/register.component';
+import { HomeComp }  from './components/home.component';
+import { LoginComp }  from './components/login.component';
+import { RegisterComp }  from './components/register.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/register',
     pathMatch: 'full'
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComp
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComp
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComp
   }
 ];
 

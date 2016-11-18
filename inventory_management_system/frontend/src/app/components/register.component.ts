@@ -7,7 +7,7 @@ import {RegisterService} from '../services/register.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
+export class RegisterComp {
   title = 'register';
   newUser: User = new User();
   registered: boolean = false;

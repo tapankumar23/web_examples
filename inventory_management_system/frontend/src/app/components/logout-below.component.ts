@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './logout-below.component.html',
   styleUrls: ['./logout-below.component.css']
 })
-export class LogoutBelowComponent {
+export class LogoutBelowComp {
   title = 'Logout app works!';
 }
