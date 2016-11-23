@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>backend1</name>
+	<name>backend</name>
 	<description>backend project for Spring Boot</description>
 
 	<parent>
@@ -88,6 +88,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

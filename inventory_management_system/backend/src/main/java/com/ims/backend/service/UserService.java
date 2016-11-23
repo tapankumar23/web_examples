@@ -1,7 +1,7 @@
 package com.ims.backend.service;
 
-import com.ims.backend.model.User;
+import com.ims.backend.model.SecUser;
 
 public interface UserService {
-	User save(User user);
+	SecUser save(SecUser user);
 }

@@ -6,16 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ims.backend.model.User;
+import com.ims.backend.model.SecUser;
 import com.ims.backend.service.UserService;
 
 @RestController
 @RequestMapping ("/user")
 public class UserController {
 	
-	@Autowired
-	private UserService userService;
+	@Autowired private UserService userService;
 
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public User registerUser(@RequestBody User user) { return userService.save(user); }
+	public SecUser registerUser(@RequestBody SecUser user) { 
+		return userService.save(user); 
+	}
 }

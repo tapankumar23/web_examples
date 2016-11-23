@@ -10,4 +10,7 @@
            					http://www.springframework.org/schema/aop 
            					http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 
+
+	<!-- Aspect -->
+	<bean id="logAspect" class="com.ims.backend.aop.LoggingAspect" />
 </beans>
