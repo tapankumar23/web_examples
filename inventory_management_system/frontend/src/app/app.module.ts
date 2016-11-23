@@ -18,6 +18,7 @@ import { RightMenuComp } from './components/right-menu.component';
 
 //###########Services##############
 import { RegisterService } from './services/register.service';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { RegisterService } from './services/register.service';
     ,HttpModule
     ,routing
   ],
-  providers: [RegisterService],
+  providers: [RegisterService,LoginService],
   bootstrap: [AppComponent]
   //bootstrap: [AppComp,TestComp,UsersComp,SuppliersListComp,LoginComp,HomeComp,RegisterComp]
 })
