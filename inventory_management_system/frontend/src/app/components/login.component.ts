@@ -33,6 +33,5 @@ export class LoginComp {
               },
       error => console.log(error)
     );
-
   }
 }

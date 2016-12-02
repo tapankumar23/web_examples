@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import {LoginService} from '../services/login.service';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: []
 })
 export class HomeComp {
-  title = 'home';
+  private currentUserName;
+
+  constructor (private loginService: LoginService){
+    this.currentUserName=localStorage.getItem("currentUserName");
+  }
 }

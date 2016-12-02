@@ -1,15 +1,15 @@
-<header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-  <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">Inventory Management System</span>
-    <div class="mdl-layout-spacer"></div>
-    <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-      Login
-    </button>
-    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-      <i class="material-icons">more_vert</i>
-    </button>
-    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-      <li class="mdl-menu__item">Logout</li>
-    </ul>
+<div class="mdl-layout__header-row">
+  <span class="mdl-layout-title">Inventory Management System</span>
+  <div class="mdl-layout-spacer"></div>
+  <span>{{loginService.checkLogin()? 'Welcome '+currentUserName+'!' : '' }} </span>
+  <button class="mdl-button mdl-js-button mdl-js-ripple-effect" (click)="onClick()">{{loginService.checkLogin()? 'Logout' : 'Login'}}</button>
+  <div [hidden]="!loginService.checkLogin()">
+      <button hidden='true' class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+        <li class="mdl-menu__item"><button class="mdl-button mdl-js-button mdl-js-ripple-effect" (click)="onClick()">{{loginService.checkLogin()? 'Logout' : 'Login'}}</button>
+        </li>
+      </ul>
   </div>
-</header>
+</div>

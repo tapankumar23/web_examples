@@ -1,1 +1,17 @@
-<h5>{{title}} component works!!!!</h5>
+<div>
+     <h3>Server-side Paging</h3>
+     <datatable
+       class="material"
+       [rows]="rows"
+       [columns]="[{name:'Name'},{name:'Gender'},{name:'Company'}]"
+       [columnMode]="'force'"
+       [headerHeight]="50"
+       [footerHeight]="50"
+       [rowHeight]="'auto'"
+       [externalPaging]="true"
+       [count]="count"
+       [offset]="offset"
+       [limit]="limit"
+       (page)='onPage($event)'>
+     </datatable>
+   </div>

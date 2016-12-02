@@ -1,5 +1,4 @@
 <div class="container">
-  <h5 class="ui dividing header">LOGIN</h5>
   <form (ngSubmit)="onSubmit()" class="ui form" [hidden]="loginService.checkLogin()">
 		<div class="one fields">
 			<div class="mdl-textfield mdl-js-textfield">
@@ -9,7 +8,7 @@
 		</div>
 		<div class="one fields">
 	    <div class="mdl-textfield mdl-js-textfield">
-	    	<input class="mdl-textfield__input" type="text" id="password"  name="password" [(ngModel)]="model.password" ngControl="password" required/>
+	    	<input class="mdl-textfield__input" type="password" id="password"  name="password" [(ngModel)]="model.password" ngControl="password" required/>
 	      <label class="mdl-textfield__label" for="password">password</label>
 	    </div>
 		</div>
@@ -18,7 +17,6 @@
 	</form>
 
 	<div [hidden]="!loginService.checkLogin()">
-    <h3>Logged In Successfully! </h3>
-    <h2>Welcome back, {{currentUserName}}!</h2>
+    {{currentUserName}} logged In.
   </div>
 </div>

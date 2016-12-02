@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {SecUser} from '../models/secuser';
+import {User} from '../models/user';
 import {RegisterService} from '../services/register.service';
 
 @Component({
@@ -9,7 +9,7 @@ import {RegisterService} from '../services/register.service';
 })
 export class RegisterComp {
   title = 'register';
-  newUser: SecUser = new SecUser();
+  newUser: User = new User();
   registered: boolean = false;
 
   constructor (private registerService: RegisterService) {}
@@ -19,7 +19,7 @@ export class RegisterComp {
     .subscribe(
       data => {
         this.registered = true;
-        this.newUser = new SecUser();
+        this.newUser = new User();
       },
       error => console.log(error)
     );

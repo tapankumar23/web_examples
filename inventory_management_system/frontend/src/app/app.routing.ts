@@ -4,11 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComp }  from './components/home.component';
 import { LoginComp }  from './components/login.component';
 import { RegisterComp }  from './components/register.component';
+import { SuppliersListComp } from './components/suppliers-list.component';
+import { DemoComponent } from './components/demo.component';
+
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/register',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
@@ -22,6 +25,14 @@ const appRoutes: Routes = [
   {
     path: 'register',
     component: RegisterComp
+  },
+  {
+    path: 'suppliers',
+    component: SuppliersListComp
+  },
+  {
+    path: 'users',
+    component: DemoComponent
   }
 ];
 

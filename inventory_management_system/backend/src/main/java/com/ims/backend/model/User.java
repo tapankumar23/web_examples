@@ -11,7 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 
 @Entity
-public class User {
+public class SecUser {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -42,4 +42,11 @@ public class User {
 	public void setPhone(String phone){this.phone=phone;}
 	public Date getCreated(){return created;}
 	public void setCreated(Date created){this.created=created;}
+	
+	@Override
+	public String toString() {
+		return "SecUser [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", userName="
+				+ userName + ", emailId=" + emailId + ", password=" + password + ", phone=" + phone + ", created="
+				+ created + "]";
+	}
 }
