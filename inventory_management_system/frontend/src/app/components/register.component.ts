@@ -5,7 +5,14 @@ import {RegisterService} from '../services/register.service';
 @Component({
   selector: 'register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+    styles: [`
+    .container {
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      flex: none;
+    }
+  `]
 })
 export class RegisterComp {
   title = 'register';

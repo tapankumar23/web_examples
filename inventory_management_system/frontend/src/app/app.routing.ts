@@ -5,6 +5,7 @@ import { HomeComp }  from './components/home.component';
 import { LoginComp }  from './components/login.component';
 import { RegisterComp }  from './components/register.component';
 import { SuppliersListComp } from './components/suppliers-list.component';
+import { UsersComp }  from './components/users.component';
 import { DemoComponent } from './components/demo.component';
 
 
@@ -32,6 +33,10 @@ const appRoutes: Routes = [
   },
   {
     path: 'users',
+    component: UsersComp
+  },
+  {
+    path: 'demo',
     component: DemoComponent
   }
 ];

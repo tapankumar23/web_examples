@@ -14,7 +14,6 @@ import { HomeComp } from './components/home.component';
 import { LoginComp } from './components/login.component';
 import { UsersComp } from './components/users.component';
 import { RegisterComp } from './components/register.component';
-import { AppHeaderComp } from './components/app-header.component';
 import { SuppliersListComp } from './components/suppliers-list.component';
 import { RightMenuComp } from './components/right-menu.component';
 import { DataFilterPipe }   from './components/data-filter.pipe';
@@ -31,7 +30,6 @@ import { LoginService } from './services/login.service';
     ,HomeComp
     ,LoginComp
     ,UsersComp
-    ,AppHeaderComp
     ,RegisterComp
     ,SuppliersListComp
     ,RightMenuComp
@@ -45,6 +43,7 @@ import { LoginService } from './services/login.service';
     ,routing
     ,CommonModule
     ,Angular2DataTableModule
+    ,DataTableModule
   ],
   providers: [RegisterService,LoginService],
   bootstrap: [AppComponent]

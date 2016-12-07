@@ -1,20 +1,28 @@
 import {Component} from '@angular/core';
 import {Observable}  from 'rxjs/Observable';
 import {LoginService} from '../services/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styles: [`
+    .container {
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      flex: none;
+    }
+  `]
 })
 export class LoginComp {
-  title = 'login component works!!!!';
 
   private model = {'username':'', 'password':''};
   private currentUserName;
 
-  constructor (private loginService: LoginService){
+  constructor (private loginService: LoginService, private router: Router){
     this.currentUserName=localStorage.getItem("currentUserName");
+    if (this.loginService.checkLogin()) this.router.navigate(['/home']);
   }
 
   onSubmit() {
@@ -28,7 +36,10 @@ export class LoginComp {
                             this.model.username='';
                             this.model.password='';
                           },
-                  error => console.log(error)
+                  error => {
+                            alert('Failed :: '+this.currentUserName+' Error :: '+error);
+                            console.log(error);
+                          }
                 );
               },
       error => console.log(error)
