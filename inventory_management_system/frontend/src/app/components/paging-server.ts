@@ -1,11 +1,28 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'users',
-  templateUrl: './users.component.html',
-  styleUrls: []
+  selector: 'server-paging-demo',
+  template: `
+    <div>
+      <datatable
+        class="material"
+        [rows]="rows"
+        [columns]="[{name:'Name'},{name:'Gender'},{name:'Company'}]"
+        [columnMode]="'standard'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [externalPaging]="true"
+        [count]="count"
+        [offset]="offset"
+        [limit]="limit"
+        (page)='onPage($event)'>
+      </datatable>
+    </div>
+  `
 })
-export class UsersComp {
+export class ServerPagingComponent {
+
   rows = [];
   count: number = 0;
   offset: number = 0;

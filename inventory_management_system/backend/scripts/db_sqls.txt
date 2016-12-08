@@ -1,0 +1,14 @@
+connect 'jdbc:derby://localhost:1527/inventory_management_system';
+
+CREATE TABLE Circle (id integer, name char(50)) > >;
+CREATE TABLE User (userId integer, firstName char(50));
+Create Table AppUser (userId integer, name char(50));
+Create Table SecUser (user_id integer, first_name char(50), last_name char(50), user_name char(50), email_id char(50), password char(50), phone char(50), created TIMESTAMP);
+Create Table SecUser (user_id integer, first_name char(50), last_name char(50), user_name char(50), email_id char(50), password char(50), phone char(50), created Date);
+
+SELECT user_id, created, email_id, first_name, last_name, password, phone, user_name FROM SecUser
+
+CREATE TABLE User (userId integer, firstName char(50), lastName char(50), userName char(50), emailId char(50), password char(50), phone char(50) ) > >;
+
+
+

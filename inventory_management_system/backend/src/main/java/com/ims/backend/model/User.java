@@ -6,12 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
 
 @Entity
-public class SecUser {
+@Table(name = "i_users")
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -25,6 +27,19 @@ public class SecUser {
 	
 	@CreationTimestamp
 	private Date created;
+	
+	public User() {}
+	public User(Long userId, String firstName, String lastName, String userName, String emailId, String password, String phone, Date created) {
+		super();
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.emailId = emailId;
+		this.password = password;
+		this.phone = phone;
+		this.created = created;
+	}
 
 	public Long getUserId(){return userId;}
 	public void setUserId(Long userId){this.userId=userId;}
@@ -45,7 +60,7 @@ public class SecUser {
 	
 	@Override
 	public String toString() {
-		return "SecUser [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", userName="
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", userName="
 				+ userName + ", emailId=" + emailId + ", password=" + password + ", phone=" + phone + ", created="
 				+ created + "]";
 	}

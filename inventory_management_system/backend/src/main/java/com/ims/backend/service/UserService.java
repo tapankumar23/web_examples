@@ -1,7 +1,13 @@
 package com.ims.backend.service;
 
-import com.ims.backend.model.SecUser;
+import java.util.List;
+
+import com.ims.backend.model.User;
 
 public interface UserService {
-	SecUser save(SecUser user);
+	User save(User user);
+
+	List<User> findAllUsers();
+
+	User findByUserName(String userName);
 }

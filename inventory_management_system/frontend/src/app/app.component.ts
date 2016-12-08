@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { HomeComp } from './components/home.component';
-import { RightMenuComp } from './components/right-menu.component';
 import {LoginService} from './services/login.service';
 import {Router} from '@angular/router';
 

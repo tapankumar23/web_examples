@@ -15,7 +15,6 @@ import { LoginComp } from './components/login.component';
 import { UsersComp } from './components/users.component';
 import { RegisterComp } from './components/register.component';
 import { SuppliersListComp } from './components/suppliers-list.component';
-import { RightMenuComp } from './components/right-menu.component';
 import { DataFilterPipe }   from './components/data-filter.pipe';
 import { DemoComponent }   from './components/demo.component';
 
@@ -32,7 +31,6 @@ import { LoginService } from './services/login.service';
     ,UsersComp
     ,RegisterComp
     ,SuppliersListComp
-    ,RightMenuComp
     ,DataFilterPipe
     ,DemoComponent
   ],

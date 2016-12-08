@@ -12,6 +12,39 @@ public class ProducerConsumer {
 		tProducer.start();
 		tConsumer.start();
 	}
+	
+	public static void main(String[] args) {
+		System.out.println("Start");
+		
+		class Producer extends Thread {
+			{this.setName("Producer");}
+			public void run() {
+				for(int i=0; i < 5;i++) {
+					System.out.println(Thread.currentThread().getName()+" is running !! "+i);
+					//Thread.yield();
+				}
+			}
+		}
+		
+		class Consumer extends Thread {
+			{this.setName("Consumer");}
+			public void run() {
+				for(int i=0; i < 5;i++) {
+					System.out.println(Thread.currentThread().getName()+" is running !! "+i);
+					//Thread.yield();
+				}
+			}
+		}
+		Producer producer = new Producer();
+		producer.setPriority(Thread.MAX_PRIORITY);
+		
+		Consumer consumer = new Consumer();
+		consumer.setPriority(Thread.MIN_PRIORITY);
+		
+		producer.start();
+		consumer.start();
+		System.out.println("End");
+	}
 }
 
 class Producer implements Runnable {
