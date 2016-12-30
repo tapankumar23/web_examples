@@ -1,0 +1,17 @@
+<h4>Categories</h4>
+<div>
+  <datatable
+    class="material"
+    [rows]="rows"
+    [columns]="[{name:'categoryId'},{name:'categoryName'},{name:'categoryDesc'}]"
+    [columnMode]="'standard'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    [externalPaging]="true"
+    [count]="count"
+    [offset]="offset"
+    [limit]="limit"
+    (page)='onPage($event)'>
+  </datatable>
+</div>

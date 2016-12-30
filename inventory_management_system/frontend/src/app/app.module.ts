@@ -17,10 +17,13 @@ import { RegisterComp } from './components/register.component';
 import { SuppliersListComp } from './components/suppliers-list.component';
 import { DataFilterPipe }   from './components/data-filter.pipe';
 import { DemoComponent }   from './components/demo.component';
+import { FinanceComponent } from './components/finance.component';
+import { CategoriesComponent } from './components/categories.component';
 
 //###########Services##############
 import { RegisterService } from './services/register.service';
 import { LoginService } from './services/login.service';
+import { SuppliersService } from './services/suppliers.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,8 @@ import { LoginService } from './services/login.service';
     ,SuppliersListComp
     ,DataFilterPipe
     ,DemoComponent
+    ,FinanceComponent
+    ,CategoriesComponent
   ],
   imports: [
     BrowserModule
@@ -43,7 +48,7 @@ import { LoginService } from './services/login.service';
     ,Angular2DataTableModule
     ,DataTableModule
   ],
-  providers: [RegisterService,LoginService],
+  providers: [RegisterService,LoginService,SuppliersService],
   bootstrap: [AppComponent]
   //bootstrap: [AppComp,TestComp,UsersComp,SuppliersListComp,LoginComp,HomeComp,RegisterComp,DemoComponent]
 })

@@ -5,17 +5,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/ims")
+@RequestMapping(value="/ims")
 public class TestController {
 
-	@RequestMapping(value="/test", method=RequestMethod.GET) 
-	public String testing() {
-		return "Welcome ims application works !!!@@------@######@@ "; 
-	}
-	
-	@RequestMapping(value="/welcome", method=RequestMethod.GET) 
-	public String welcome() {
-		return "Welcome ims application works welcome method called !!!@@@######@@ "; 
-	}
+	@RequestMapping(method=RequestMethod.GET) 
+	public String testing() { return "Welcome ims application works @@@@@@@ !!!"; }
 }
 

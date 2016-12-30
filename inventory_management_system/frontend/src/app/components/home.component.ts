@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {LoginService} from '../services/login.service';
+import {TestComp} from './test.component';
 
 @Component({
   selector: 'home',

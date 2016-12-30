@@ -1,7 +1,5 @@
 package com.ims.backend.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,5 +26,5 @@ public class UserResource {
 	}
 	
 	@RequestMapping(value="/test", method=RequestMethod.GET) 
-	public String testing() { return "Welcome ims application works !!!@@------@######@@ "; }
+	public String testing() { return "Welcome ims application works !!!"; }
 }

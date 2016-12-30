@@ -1,10 +1,9 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
 	<div class="mdl-layout__drawer">
-	
+
 		<!-- This is AppHeader Component -->
 		<span class="mdl-layout-title">IMS</span>
 		<div *ngIf="loginService.checkLogin()">
-			<span>{{loginService.checkLogin()? 'Hi '+currentUserName+' !' : '' }}</span>
 			<button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon"> <i class="material-icons">more_vert</i> </button>
 			<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
 			  <li class="mdl-menu__item" (click)="onClick()">Logout</li>
@@ -17,12 +16,13 @@
 			<a class="mdl-navigation__link" href="/home">Home</a>
 			<a *ngIf="!loginService.checkLogin()" class="mdl-navigation__link" href="/login">Login</a>
 			<a class="mdl-navigation__link" href="/register">Register</a>
-			<a class="mdl-navigation__link" href="">Finance</a>
-			<a class="mdl-navigation__link" href="">Procurement</a>
+			<a class="mdl-navigation__link" href="/finance">Finance</a>
+			<a class="mdl-navigation__link" href="/categories">Categories</a>
 			<a class="mdl-navigation__link" href="">Store Inventory</a>
 			<a class="mdl-navigation__link" href="/suppliers">Suppliers</a>
 			<a class="mdl-navigation__link" href="/users">Users</a>
 			<a class="mdl-navigation__link" href="/demo">Demo</a>
+			<a class="mdl-navigation__link" (click)="onClick()">Logout</a>
 			<div class="mdl-layout-spacer"></div>
 			<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
 		</nav>
@@ -30,8 +30,6 @@
 	 <main class="mdl-layout__content">
         <div class="page-content" style="padding-left:100px;">
         	<router-outlet></router-outlet>
-		</div>
-     </main>
+				</div>
+    </main>
 </div>
-
-

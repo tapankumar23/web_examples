@@ -8,5 +8,5 @@ import org.aspectj.lang.annotation.Before;
 public class LoggingAspect {
 	
 	@Before("execution(* com.ims..*.*(..))")
-	public void logBefore(JoinPoint joinPoint) { System.out.println(joinPoint.getTarget().getClass().getName()+" :: " + joinPoint.getSignature().getName()); }
+	public void logBefore(JoinPoint joinPoint) { System.out.println("Class ~ Method :: "+joinPoint.getTarget().getClass().getName()+" ~ " + joinPoint.getSignature().getName()); }
 }
